@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+         body{
+    background-image: linear-gradient(rgb(91, 212, 206),rgb(21, 144, 197));
+          
+        }
+     .one{
+        width: 30%;
+        height: 30%;
+     background-color: white;
+     border: 20px black;
+     border-style: double;
+        margin:15% 32%;
+      
+        border-radius: 50%;
+        display: flex;
+        justify-content: space-evenly;
+     flex-direction: column;
+     }
+     #heading{
+        flex-direction: column;
+        display: flex;
+        font-family: Arial, Helvetica, sans-serif;
+        align-items: center;
+     }
+     #result{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        color: rgb(8, 94, 38);
+     }
+     .two input{
+  height: 30px;}
+  .two, #button1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+
+     }
+     #button1{
+  color: rgb(255, 255, 255);
+  background-color: rgb(11, 95, 52);
+    height: 25px;
+    width: 80px;
+    height: 25px;
+    
+  margin-left: 175px;
+   }
+    </style>
+    <div class="one">
+        <h3 id="heading">FD Rate Calculator</h3>
+<div class="two">
+    <input type="text" id="firstvalue" placeholder="Enter the month:">
+</div>
+<div >
+    <button id="button1"  type="submit" onclick="convert1()">Calculator</button>
+</div>
+<div id="result"></div>
+
+    </div>
+    <script>
+        function convert1(){
+            let ans=Number(document.getElementById("firstvalue").value);
+            let val;
+        if(ans<3){
+            val="5.8%"
+        }
+        else if(ans>=3 && ans<=6){
+             val="6.5%"     
+        }
+        else if(ans>=7&&ans<=9){
+             val="6.8%"    
+        }
+        else if(ans>=10){
+             val="7%"   
+        }
+      let c=document.getElementById("result");
+            c.innerHTML="FD Rate Of Interest "+ val;
+        }
+    </script>
+</body>
+</html>
